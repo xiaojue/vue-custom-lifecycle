@@ -31,12 +31,11 @@ mylifecycle({
       let DataB = await serviceB();
       ctx.requestFirstScreenData = { DataB };
     }
+    ctx.requestFirstScreenData.DataC = "C";
   },
   serviceFormat(ctx) {
     if (isApp) {
       ctx.requestFirstScreenData.DataA.data.a = "test data";
-    } else {
-      ctx.requestFirstScreenData.DataB.data.a = "test data";
     }
   },
   renderFirstScreenData(ctx) {
@@ -45,6 +44,7 @@ mylifecycle({
     } else {
       this.Data = ctx.requestFirstScreenData.DataB;
     }
+    this.DataC = ctx.requestFirstScreenData.DataC;
   },
   completed(ctx) {
     console.log("render completed");
