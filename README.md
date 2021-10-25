@@ -1,7 +1,5 @@
 # vue-custom-lifecycle
 
-使用 mixin 的方式，在 `beforecreated` 创建一个自定义的生命周期
-
 ```ts
 import { serviceA , serviceB} from './services';
 import { Vue, Component, Mixin } from "vue-property-decorator";
